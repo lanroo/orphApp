@@ -1,8 +1,9 @@
 import React from "react";
+import "../styles/pages/landing.css";
+import logoimg from "../images/Logo.svg";
+import { FiArrowRight } from "react-icons/fi";
 
-import "./styles/global.css";
-
-function App() {
+function Landing() {
   return (
     <div id="page-landing">
       <div className="content-wrapper">
@@ -26,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default Landing;
