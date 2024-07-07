@@ -1,28 +1,18 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from "./pages/Landing";
+import OrphanagesMap from "./pages/OrphanagesMap";
 
 import "./styles/global.css";
 
 function App() {
   return (
-    <div id="page-landing">
-      <div className="content-wrapper">
-        <img src={logoimg} alt="Happy" />
-
-        <main>
-          <h1>Leve felicidade para o Mundo</h1>
-          <p>Visite orfanatos e mude a vida de muitas crianças.</p>
-        </main>
-
-        <div className="location">
-          <strong>Belém</strong>
-          <span>PA</span>
-        </div>
-
-        <a href="" className="enter-app">
-          <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6" />
-        </a>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/app" element={<OrphanagesMap />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

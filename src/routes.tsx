@@ -1,16 +1,19 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import OrphanagesMap from "./pages/OrphanagesMap";
 
-function Routes() {
+import "./styles/global.css";
+
+function App() {
   return (
     <BrowserRouter>
-      <Route path="/" Component={Landing} />
-      <Route path="/app" Component={OrphanagesMap} />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/app" element={<OrphanagesMap />} />
+      </Routes>
     </BrowserRouter>
   );
 }
 
-export default Routes;
+export default App;
